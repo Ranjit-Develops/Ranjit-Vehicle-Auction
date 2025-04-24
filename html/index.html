@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Auction House</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="auction-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>VEHICLE AUCTION</h2>
+                <div class="close-btn"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="auction-list" id="auction-list">
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="vehicle-info">
+                <div class="vehicle-name-container">
+                    <h1 class="vehicle-name">Select a Vehicle</h1>
+                    <button class="preview-btn" data-vehicle="" id="main-preview-btn">Preview</button>
+                </div>
+                <div class="auction-details">
+                    <div class="timer-box">
+                        <span class="label">ENDING IN</span>
+                        <span class="time-left">--:--:--</span>
+                    </div>
+                    <div class="bid-box">
+                        <span class="label">CURRENT BID</span>
+                        <span class="current-bid">$0</span>
+                    </div>
+                </div>
+                
+                <div class="bid-controls">
+                    <input type="number" id="bid-amount" placeholder="Enter bid amount">
+                    <button class="bid-button primary">PLACE BID</button>
+                    <button class="quick-bid">QUICK BID +$2500</button>
+                </div>
+
+                <div class="bid-history">
+                    <h3>BID HISTORY</h3>
+                    <div class="bid-list" id="bid-history-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-mode-container">
+            <h3 class="preview-vehicle-name"></h3>
+            <div class="preview-controls">
+                <button class="rotate-left"><i class="fas fa-undo"></i></button>
+                <button class="rotate-right"><i class="fas fa-redo"></i></button>
+                <button class="close-preview">CLOSE PREVIEW</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

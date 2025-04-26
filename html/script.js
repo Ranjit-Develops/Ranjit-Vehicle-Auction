@@ -183,7 +183,7 @@ function selectAuction(auctionId) {
     
     $(".bid-list").html('<div class="loading">Loading bid history...</div>');
     
-    $.post('https://Car/getBidHistory', JSON.stringify({
+    $.post('https://Ranjit-Car_Auction/getBidHistory', JSON.stringify({
         auctionId: auctionId
     }));
     

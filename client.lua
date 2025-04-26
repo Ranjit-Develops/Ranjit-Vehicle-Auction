@@ -615,7 +615,7 @@ AddEventHandler('vehicle-auction:setAuctionParams', function(data)
                 default = "5000"
             },
             {
-                text = "Duration (hours, decimals allowed)",
+                text = "0.01=1min, 1=1hr",
                 name = "duration",
                 type = "text",
                 isRequired = true,

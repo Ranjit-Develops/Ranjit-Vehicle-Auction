@@ -183,7 +183,7 @@ function selectAuction(auctionId) {
     
     $(".bid-list").html('<div class="loading">Loading bid history...</div>');
     
-    $.post('https://Ranjit-Car_Auction/getBidHistory', JSON.stringify({
+    $.post('https://Ranjit-Vehicle-Auction/getBidHistory', JSON.stringify({
         auctionId: auctionId
     }));
     
@@ -239,7 +239,7 @@ function updateBidHistory(history) {
 }
 
 function previewVehicle(vehicle) {
-    $.post('https://Car/previewVehicle', JSON.stringify({
+    $.post('https://Ranjit-Vehicle-Auction/previewVehicle', JSON.stringify({
         vehicle: vehicle
     }));
 }
@@ -299,7 +299,7 @@ function closeUI() {
     });
     countdownIntervals = {};
     
-    $.post('https://Car/closeUI', JSON.stringify({}));
+    $.post('https://Ranjit-Vehicle-Auction/closeUI', JSON.stringify({}));
 }
 
 function showNotification(message, type = "info") {
@@ -326,7 +326,7 @@ $(document).ready(function() {
             const auctionId = parseInt($(this).data("id"));
             selectAuction(auctionId);
             
-            $.post('https://Car/selectAuction', JSON.stringify({
+            $.post('https://Ranjit-Vehicle-Auction/selectAuction', JSON.stringify({
                 auctionId: auctionId
             }));
         }
@@ -352,7 +352,7 @@ $(document).ready(function() {
             return;
         }
         
-        $.post('https://Car/placeBid', JSON.stringify({
+        $.post('https://Ranjit-Vehicle-Auction/placeBid', JSON.stringify({
             auctionId: activeAuction.id,
             bidAmount: bidAmount
         }));
@@ -365,7 +365,7 @@ $(document).ready(function() {
         
         const quickBidAmount = activeAuction.currentBid + 2500;
         
-        $.post('https://Car/placeBid', JSON.stringify({
+        $.post('https://Ranjit-Vehicle-Auction/placeBid', JSON.stringify({
             auctionId: activeAuction.id,
             bidAmount: quickBidAmount
         }));
@@ -376,17 +376,17 @@ $(document).ready(function() {
     $(".rotate-left").on("click", function() {
         $(this).addClass("active");
         setTimeout(() => { $(this).removeClass("active"); }, 200);
-        $.post('https://Car/rotatePreview', JSON.stringify({ direction: "left" }));
+        $.post('https://Ranjit-Vehicle-Auction/rotatePreview', JSON.stringify({ direction: "left" }));
     });
     
     $(".rotate-right").on("click", function() {
         $(this).addClass("active");
         setTimeout(() => { $(this).removeClass("active"); }, 200);
-        $.post('https://Car/rotatePreview', JSON.stringify({ direction: "right" }));
+        $.post('https://Ranjit-Vehicle-Auction/rotatePreview', JSON.stringify({ direction: "right" }));
     });
     
     $(".close-preview").on("click", function() {
-        $.post('https://Car/closePreview', JSON.stringify({}));
+        $.post('https://Ranjit-Vehicle-Auction/closePreview', JSON.stringify({}));
     });
     
     $(document).on("keyup", function(e) {

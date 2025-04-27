@@ -4,7 +4,7 @@
 
 | If you are interested in joining my community: [Discord](https://discord.gg/TdDRdWpeJz) | For questions, join the Discord or add me: `ranjit_07` |
 
-**Preview Video:** [Watch Here](https://youtu.be/mQ0ptMDeeX0?si=KzhaTZOiLZCrfbnK)
+**Preview Video:** :- https://youtu.be/mQ0ptMDeeX0?si=KzhaTZOiLZCrfbnK
 
 
 
